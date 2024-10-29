@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Code</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+</head>
+<body>
+    <main class=" w-100 d-flex justify-content-center align-items-center" style="height: 100vh; background-color: black;">
+        <h1 style="font-size:120px;" class="text-light "id="time">1:2:4 </h1>
+    </main>
+</body>
+<script>
+
+ const getTime=()=>{
+   const localTime=new Date()
+   let hours=localTime.getHours()
+   session="AM"
+  if(hours>12){
+    hours=hours-12
+    session="PM"
+  }
+
+   let minutes=localTime.getMinutes()
+   let seconds=localTime.getSeconds()
+
+   console.log(hours);
+   time.innerHTML=`${hours}:${minutes}:${seconds}:${session}`
+   setTimeout(() => {
+    getTime()
+   }, 1000);
+
+    }
+ getTime()
+   
+    
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
+
+</html>
